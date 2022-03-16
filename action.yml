@@ -22,10 +22,8 @@ runs:
           const newDescription = `<img alt="CodeSandbox logo" src="https://raw.githubusercontent.com/codesandbox/open-in-codesandbox/main/assets/csb.svg" />&nbsp; Open in CodeSandbox <a href="https://codesandbox.io/p/github/${owner}/${repo}/${branch}">Web Editor</a> | <a href="https://codesandbox.io/p/vscode?owner=${owner}&repo=${repo}&branch=${branch}">VS Code</a>
 
           <!-- ${sentinel} -->
-          
-          ---
 
-          ` + (oldDescription ?? '');
+          ${(oldDescription ?? '')}`;
 
           github.rest.pulls.update({
             owner,
