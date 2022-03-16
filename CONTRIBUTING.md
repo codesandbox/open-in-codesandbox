@@ -42,6 +42,7 @@ When releasing a patch or minor change to the action:
 1. Create a new fully-qualified tag, for example `v1.0.1`.
 2. Test against this tag with an example repository as appropriate.
 3. Move the major version tag, for example `v1`, to match the new version.
+4. Create a Release in GitHub, including publication to the Marketplace.
 
 When releasing a breaking change to the action:
 
@@ -49,6 +50,7 @@ When releasing a breaking change to the action:
 2. Create a new fully-qualified tag, for example `v2.0.0`.
 3. Test against this tag with an example repository as appropriate.
 4. Create a new major version tag, for example `v2`, to match the new version.
+5. Create a Release in GitHub, including publication to the Marketplace.
 
 Further updates to previous major versions can still occur on the `release-v*`
 branches, while the latest changes continue on `main`.

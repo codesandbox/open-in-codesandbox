@@ -1,5 +1,8 @@
 name: 'Open in CodeSandbox'
 description: 'GitHub Action that makes it easy to review your work in CodeSandbox.'
+branding:
+  icon: 'square'
+  color: 'black'
 runs:
   using: 'composite'
   steps:
