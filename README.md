@@ -1,4 +1,8 @@
-# Open PRs in CodeSandbox
+# (Deprecated) Open PRs in CodeSandbox
+
+**Note**: This action is now **deprecated**. Please install our [GitHub App](https://github.com/apps/codesandbox) for this and other great features.
+
+---
 
 GitHub Action that makes it easy to review your work in CodeSandbox.
 
