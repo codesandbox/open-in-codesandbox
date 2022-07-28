@@ -1,4 +1,4 @@
-name: 'Open in CodeSandbox'
+name: '(Deprecated) Open in CodeSandbox'
 description: 'GitHub Action that makes it easy to review your work in CodeSandbox.'
 branding:
   icon: 'square'
@@ -10,27 +10,4 @@ runs:
       uses: actions/github-script@v6
       with:
         script: |
-          const sentinel = 'codesandbox/open-in-codesandbox:complete';
-          const oldDescription = context.payload.pull_request.body;
-
-          if (oldDescription != null && oldDescription.includes(sentinel)) {
-            return;
-          }
-
-          const owner = context.payload.repository.owner.login;
-          const repo = context.payload.repository.name;
-          const branch = context.payload.pull_request.head.ref;
-          const pull_number = context.payload.pull_request.number;
-
-          const newDescription = `<img alt="CodeSandbox logo" src="https://raw.githubusercontent.com/codesandbox/open-in-codesandbox/main/assets/csb.light.svg#gh-dark-mode-only" /><img alt="CodeSandbox logo" src="https://raw.githubusercontent.com/codesandbox/open-in-codesandbox/main/assets/csb.svg#gh-light-mode-only" />&nbsp; Open in CodeSandbox <a href="https://codesandbox.io/p/github/${owner}/${repo}/${branch}">Web Editor</a> | <a href="https://codesandbox.io/p/vscode?owner=${owner}&repo=${repo}&branch=${branch}">VS Code</a>
-
-          <!-- ${sentinel} -->
-
-          ${(oldDescription ?? '')}`;
-
-          github.rest.pulls.update({
-            owner,
-            repo,
-            pull_number,
-            body: newDescription
-          });
+          console.log("This action is deprecated. Please use our GitHub App instead: https://github.com/apps/codesandbox");
